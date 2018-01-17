@@ -1,12 +1,14 @@
 {
   "name": "Generate Threshold Matrix",
-  "description": "The script receives 4 arguments:\n\n- **evaluation**: User evaluation to inspect\n\n- **class-name**: Name of the positive class, or the class to inspect\n\n- **cost-FP**: False positive cost\n\n- **cost-FN**: False negative cost\n\n- **dataset-name**: Name of the resources (Source inline and Dataset)\n\nAnd returns as output a dataset-id which header is: _\"Threshold,TP,FP,TN,FN,Total\\_Cost\"_",
+  "description": "The script receives 4 arguments:  \n- **evaluation**: User evaluation to inspect  \n- **class-name**: Name of the positive class, or the class to inspect  \n- **cost-FP**: False positive cost  \n- **cost-FN**: False negative cost  \n- **cost-TP**: True positive cost  \n- **cost-TN**: True negative cost  \n- **benefit-TP**: True positive benefit \n- **perc-retention**: Percentage (0-1) of retention in TPs  \n- **dataset-name**: Name of the resources (Source inline and Dataset)\n\nAnd returns as output a dataset-id which header is: _\"Threshold,TP,FP,TN,FN,Cost\\_Fx,Cost\\_Benefits\"_",
   "tags": [
     "Evaluation",
     "Confusion Matrix",
     "Threshold",
     "Threshold Cost",
-    "Class Thresholds"
+    "Class Thresholds",
+    "Cost False X",
+    "Costs and Benefits"
   ],
   "category": 11,
   "kind": "script",
@@ -36,6 +38,30 @@
       "type": "number"
     },
     {
+      "default": 0,
+      "description": "Cost of a True Positive",
+      "name": "cost-TP",
+      "type": "number"
+    },
+    {
+      "default": 0,
+      "description": "Cost of a True Negative",
+      "name": "cost-TN",
+      "type": "number"
+    },
+    {
+      "default": 0,
+      "description": "Benefit of a True Positive",
+      "name": "benefit-TP",
+      "type": "number"
+    },
+    {
+      "default": 1,
+      "description": "Percentage of retention of TPs (0-1)",
+      "name": "perc-retention",
+      "type": "number"
+    },
+    {
       "default": "Per-threshold Costs",
       "description": "Source and Dataset name",
       "name": "dataset-name",
@@ -44,7 +70,7 @@
   ],
   "outputs": [
     {
-      "description": "Output dataset containing Threshold,TP,FP,TN,FN,Total_Cost",
+      "description": "Output dataset containing Threshold,TP,FP,TN,FN,Cost_Fx,Cost_Benefits",
       "name": "dataset",
       "type": "dataset-id"
     }

@@ -10,43 +10,60 @@
                  ((head ls) "per_threshold_confusion_matrices")
                  (recur (tail ls)))))))
 
+
 ;; A function that receives a "per_threshold_confusion_matrices"
 ;; list and retuns a new list
-(define (mnt-dataset my-ptcm cost-FP cost-FN)
+(define (mnt-dataset my-ptcm cost-FP cost-FN cost-TP cost-TN
+         benefit-TP perc-retention)
   (for (x my-ptcm)
     (let (threshold (x [1] "")
           tp (x [0 0])
           fp (x [0 1])
           tn (x [0 2])
           fn (x [0 3]))
-       [threshold tp fp tn fn (+ (* fp cost-FP) (* fn cost-FN))])))
+       [threshold
+        tp
+        fp
+        tn
+        fn
+        (+ (* fp cost-FP) (* fn cost-FN))
+        (- (+ (* fp cost-FP)
+              (* fn cost-FN)
+              (* tp cost-TP)
+              (* tn cost-TN))
+           (* tp benefit-TP perc-retention))
+       ])))
+
 
 ;; A function that receives a list of rows and a name,
 ;; and creates a source inline
 (define (create-source-from-rows rows name)
-  (let (header "Threshold,TP,FP,TN,FN,Total_Cost"
+  (let (header "Threshold,TP,FP,TN,FN,Cost_Fx,Cost_Benefits"
         data (join "\n"
                    (map (lambda (r) (join "," (map str r))) rows)))
     (create-and-wait-source 
        {"name" name "data" (join "\n" [header data])})))
 
-;; Main call to create a dataset, using as parameters
-;; an evaluation, a class_name and the dataset_name
-;; (define dataset
-;;   (create-and-wait-dataset 
-;;     (create-source-from-rows
-;;       (mnt-dataset (get-ptcm evaluation class-name)
-;;                    cost-FP
-;;                    cost-FN)
-;;       dataset-name)))
 
+;; Main script
+;; cost-FP: Cost of a False Positive (cost of the action to avoid the positive)
+;; cost-FN: Cost of a False Negative (cost of not finding the positive class)
+;; cost-TP: Cost of a True Positive (cost of the action, usually same as cost-FP)
+;; cost-TN: Cost of a True Negative (usually 0)
+;; benefit-TP: Benefit of finding a positive (usually same as cost-FN)
+;; perc-retention: Not all loacated TPs can be always retained
+;;
 (if (and (string? class-name) (not (empty? class-name)))
     (let (dataset 
       (create-and-wait-dataset 
         (create-source-from-rows
           (mnt-dataset (get-ptcm evaluation class-name)
                        cost-FP
-                       cost-FN)
+                       cost-FN
+                       cost-TP
+                       cost-TN
+                       benefit-TP
+                       perc-retention)
           dataset-name))) dataset)
     (raise "Empty class name"))
 
