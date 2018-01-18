@@ -1,6 +1,6 @@
 {
   "name": "Generate Threshold Matrix",
-  "description": "The script receives 4 arguments:  \n- **evaluation**: User evaluation to inspect  \n- **class-name**: Name of the positive class, or the class to inspect  \n- **cost-FP**: False positive cost  \n- **cost-FN**: False negative cost  \n- **cost-TP**: True positive cost  \n- **cost-TN**: True negative cost  \n- **benefit-TP**: True positive benefit \n- **perc-retention**: Percentage (0-1) of retention in TPs  \n- **dataset-name**: Name of the resources (Source inline and Dataset)\n\nAnd returns as output a dataset-id which header is: _\"Threshold,TP,FP,TN,FN,Cost\\_Fx,Cost\\_Benefits\"_",
+  "description": "The script receives 4 arguments:  \n\n-  **evaluation**: User evaluation to inspect\n\n-  **class-name**: Name of the positive class, or the class to inspect\n\n-  **cost-FP**: False positive cost\n\n-  **cost-FN**: False negative cost\n\n-  **cost-TP**: True positive cost\n\n-  **cost-TN**: True negative cost\n\n-  **benefit-TP**: True positive benefit\n\n-  **perc-retention**: Percentage (0-1) of retention in TPs\n\n-  **dataset-name**: Name of the resources (Source inline and Dataset)\n\nAnd returns as output a dataset-id which header is: _\"Threshold,TP,FP,TN,FN,Cost\\_Fx,Cost\\_Benefits\"_",
   "tags": [
     "Evaluation",
     "Confusion Matrix",
