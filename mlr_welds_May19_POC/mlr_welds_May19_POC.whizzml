@@ -1,0 +1,2331 @@
+;;Initial Source: mlr_welds_May19_POC.csv uploaded
+(define updated_source
+  (update-and-wait initial_source
+                   (bigml.fields.to-ids {"fields"
+                                         {"000095"
+                                          {"name" "CleanTimeActual"
+                                           "optype" "numeric"}
+                                          "000005"
+                                          {"name" "mqtt.t.e.root"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000044"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideForwardDataValid"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000022"
+                                          {"name"
+                                           "MD.MP.PilotCurrentActual"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00002d"
+                                          {"name"
+                                           "MD.MP.TRRotationAngleActual"
+                                           "optype" "numeric"}
+                                          "000078"
+                                          {"name"
+                                           "WeldCurrentReferencePositive"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00001e"
+                                          {"name"
+                                           "MD.MP.StudReloadCountNoSOW"
+                                           "optype" "numeric"}
+                                          "000050"
+                                          {"name"
+                                           "MD.MP.WeldToolMoveTimeRotationSegmentInPickupPosition"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00000f"
+                                          {"name" "mqtt.t.e.subtyp"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000067"
+                                          {"name" "StudType"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00000c"
+                                          {"name" "mqtt.t.e.plant_id"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000053"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperValueDataValid"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000041"
+                                          {"name" "MD.MP.Message"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000021"
+                                          {"name" "MD.MP.Optimized"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000052"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperValueStudActual"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000075"
+                                          {"name" "ProgTotalWOPs"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000097"
+                                          {"name" "current_Top_1_AMP"
+                                           "optype" "numeric"}
+                                          "000068"
+                                          {"name" "StudLeftRightHand"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000043"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideForwardResponseTimeActualLeaveBackPosition"
+                                           "optype" "numeric"}
+                                          "000003"
+                                          {"name" "CarbodyID"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000023"
+                                          {"name" "MD.MP.PilotTimeActual"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000039"
+                                          {"name"
+                                           "MD.MP.MACCurrentReference"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000071"
+                                          {"name" "StudPlantDescription"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00002a"
+                                          {"name" "MD.MP.StickoutReference"
+                                           "optype" "numeric"}
+                                          "000060"
+                                          {"name" "plant"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00001d"
+                                          {"name"
+                                           "MD.MP.StudReloadCountMissingStud"
+                                           "optype" "numeric"}
+                                          "000074"
+                                          {"name" "WeldToolType"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000056"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperCloseMoveTimeActual"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000064"
+                                          {"name" "studType_"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00008f"
+                                          {"name" "WeldEnergyActual"
+                                           "optype" "numeric"}
+                                          "000010"
+                                          {"name" "mqtt.t.e.version"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00000d"
+                                          {"name" "mqtt.t.e.typ"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00004a"
+                                          {"name"
+                                           "MD.MP.FeedingTimeStudInTube"
+                                           "optype" "numeric"}
+                                          "000002-2"
+                                          {"name" "timestamp.day-of-month"
+                                           "optype" "numeric"}
+                                          "000029"
+                                          {"name" "MD.MP.LiftFinishedMode"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000049"
+                                          {"name" "MD.MP.FeedingTimeActual"
+                                           "optype" "numeric"}
+                                          "00003a"
+                                          {"name" "MD.MP.MACCurrentActual"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000017"
+                                          {"name" "MD.MP.WeldMode"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "0000a4"
+                                          {"name" "liftpos_Top_1_FREQ"
+                                           "optype" "numeric"}
+                                          "000047"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideBackwardMoveTime"
+                                           "optype" "numeric"}
+                                          "000020"
+                                          {"name"
+                                           "MD.MP.OptimizationReference"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000019"
+                                          {"name" "MD.MP.OutletTotalWelds"
+                                           "optype" "numeric"}
+                                          "00002c"
+                                          {"name"
+                                           "MD.MP.StickoutUpperLimit"
+                                           "optype" "numeric"}
+                                          "0000a3"
+                                          {"name" "liftpos_Top_1_AMP"
+                                           "optype" "numeric"}
+                                          "00002b"
+                                          {"name"
+                                           "MD.MP.StickoutLowerLimit"
+                                           "optype" "numeric"}
+                                          "00006e"
+                                          {"name"
+                                           "StudLeftRightHandDescription"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000015"
+                                          {"name" "MD.MP.ToolNo"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000090"
+                                          {"name" "WeldEnergyUpperLimit"
+                                           "optype" "numeric"}
+                                          "000033"
+                                          {"name" "MD.MP.CleanSuccessful"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000016"
+                                          {"name" "MD.MP.WeldStartMode"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000048"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideBackwardDataValid"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000013"
+                                          {"name" "MD.MP.StudID"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000096"
+                                          {"name" "DeviceGeneration"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "0000a8"
+                                          {"name" "liftpos_Top_3_FREQ"
+                                           "optype" "numeric"}
+                                          "000057"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperOpenMoveTimeActual"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00007a"
+                                          {"name" "WeldCurrentLowerLimit"
+                                           "optype" "numeric"}
+                                          "000098"
+                                          {"name" "current_Top_1_FREQ"
+                                           "optype" "numeric"}
+                                          "000091"
+                                          {"name" "WeldEnergyLowerLimit"
+                                           "optype" "numeric"}
+                                          "00004f"
+                                          {"name"
+                                           "MD.MP.WeldToolMoveTimeRotationSegmentInFeedPosition"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00009d"
+                                          {"name" "voltage_Top_1_AMP"
+                                           "optype" "numeric"}
+                                          "00005b"
+                                          {"name"
+                                           "MD.MP.WeldToolStudBlockDataValid"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000051"
+                                          {"name"
+                                           "MD.MP.WeldToolRotationSegmentDataValid"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000024"
+                                          {"name"
+                                           "MD.MP.WeldVoltagePeakReference"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000088"
+                                          {"name" "LMLiftHeightLowerLimit"
+                                           "optype" "numeric"}
+                                          "00005a"
+                                          {"name"
+                                           "MD.MP.WeldToolStudBlockValueActual"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00003e"
+                                          {"name"
+                                           "MD.MP.RepeatedWOPsCountOutletActual"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "0000a9"
+                                          {"name" "MD.MP.Quality"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000001"
+                                          {"name" "StudID"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000018"
+                                          {"name" "MD.MP.SystemTotalWelds"
+                                           "optype" "numeric"}
+                                          "00006a"
+                                          {"name" "StudModel"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00009e"
+                                          {"name" "voltage_Top_1_FREQ"
+                                           "optype" "numeric"}
+                                          "00005f"
+                                          {"name" "line"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000083"
+                                          {"name" "PilotVoltageUpperLimit"
+                                           "optype" "numeric"}
+                                          "000072"
+                                          {"name" "StudToolDescription"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000032"
+                                          {"name" "MD.MP.CleanOccured"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00005c"
+                                          {"name" "uniqueID"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000002"
+                                          {"name" "timestamp"
+                                           "optype" "datetime"
+                                           "time_formats" ["mysql"]}
+                                          "000002-6"
+                                          {"name" "timestamp.second"
+                                           "optype" "numeric"}
+                                          "00007c"
+                                          {"name" "WeldTimeReference"
+                                           "optype" "numeric"}
+                                          "000059"
+                                          {"name"
+                                           "MD.MP.WeldToolPickupValueDataValid"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "0000ab"
+                                          {"name" "WIP"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000089"
+                                          {"name" "DropTimeActual"
+                                           "optype" "numeric"}
+                                          "00000e"
+                                          {"name" "mqtt.t.e.typ_version"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000008"
+                                          {"name" "mqtt.t.e.location_id"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00009a"
+                                          {"name" "current_Top_2_FREQ"
+                                           "optype" "numeric"}
+                                          "000036"
+                                          {"name"
+                                           "MD.MP.CleanVoltageUpperLimit"
+                                           "optype" "numeric"}
+                                          "000025"
+                                          {"name"
+                                           "MD.MP.WeldVoltageDropReference"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00003c"
+                                          {"name" "MD.MP.CoolingAirActive"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00008b"
+                                          {"name" "LMPenetrationActual"
+                                           "optype" "numeric"}
+                                          "000034"
+                                          {"name"
+                                           "MD.MP.CleanVoltageActual"
+                                           "optype" "numeric"}
+                                          "000092"
+                                          {"name" "WeldVoltagePeakActual"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00000a"
+                                          {"name" "mqtt.t.e.compressed"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00001a"
+                                          {"name" "MD.MP.OutletTotalWOPs"
+                                           "optype" "numeric"}
+                                          "00006c"
+                                          {"name" "StudTool"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000093"
+                                          {"name" "WeldVoltageDropActual"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000009"
+                                          {"name" "mqtt.t.e.format"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000094"
+                                          {"name" "StickoutActual"
+                                           "optype" "numeric"}
+                                          "0000a1"
+                                          {"name" "voltage_Top_3_AMP"
+                                           "optype" "numeric"}
+                                          "0000a0"
+                                          {"name" "voltage_Top_2_FREQ"
+                                           "optype" "numeric"}
+                                          "000055"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperValueOpenActual"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00001b"
+                                          {"name"
+                                           "MD.MP.WeldToolTotalWelds"
+                                           "optype" "numeric"}
+                                          "000002-0"
+                                          {"name" "timestamp.year"
+                                           "optype" "numeric"}
+                                          "000069"
+                                          {"name" "StudVariant"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00007f"
+                                          {"name" "WeldVoltageActual"
+                                           "optype" "numeric"}
+                                          "000028"
+                                          {"name" "MD.MP.LMPositionActual"
+                                           "optype" "numeric"}
+                                          "00003f"
+                                          {"name"
+                                           "MD.MP.RepeatedWOPsCountWeldProgram"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000007"
+                                          {"name" "mqtt.t.e.environment"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00004d"
+                                          {"name"
+                                           "MD.MP.WeldToolMoveTimeLoadingPinForward"
+                                           "optype" "numeric"}
+                                          "000058"
+                                          {"name"
+                                           "MD.MP.WeldToolPickupRotationAnglePosition"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "0000a6"
+                                          {"name" "liftpos_Top_2_FREQ"
+                                           "optype" "numeric"}
+                                          "000031"
+                                          {"name"
+                                           "MD.MP.CleanCurrentActual"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000061"
+                                          {"name" "station"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "0000aa"
+                                          {"name" "MD.MP.FaultCode"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000040"
+                                          {"name" "MD.MP.Remarks"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00008e"
+                                          {"name" "LMPenetrationLowerLimit"
+                                           "optype" "numeric"}
+                                          "000054"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperCorrectionValue"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000087"
+                                          {"name" "LMLiftHeightUpperLimit"
+                                           "optype" "numeric"}
+                                          "000081"
+                                          {"name" "WeldVoltageLowerLimit"
+                                           "optype" "numeric"}
+                                          "000002-3"
+                                          {"name" "timestamp.day-of-week"
+                                           "optype" "numeric"}
+                                          "000080"
+                                          {"name" "WeldVoltageUpperLimit"
+                                           "optype" "numeric"}
+                                          "00008d"
+                                          {"name" "LMPenetrationUpperLimit"
+                                           "optype" "numeric"}
+                                          "000000"
+                                          {"name" "fingerprint"
+                                           "optype" "text"
+                                           "term_analysis"
+                                           {"case_sensitive" false
+                                            "enabled" true
+                                            "language" "none"
+                                            "stopword_removal"
+                                            "selected_language"
+                                            "token_mode" "all"
+                                            "use_stopwords" false}}
+                                          "000035"
+                                          {"name"
+                                           "MD.MP.CleanVoltageLowerLimit"
+                                           "optype" "numeric"}
+                                          "000006"
+                                          {"name" "mqtt.t.e.name"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000002-5"
+                                          {"name" "timestamp.minute"
+                                           "optype" "numeric"}
+                                          "000002-4"
+                                          {"name" "timestamp.hour"
+                                           "optype" "numeric"}
+                                          "00005d"
+                                          {"name" "location"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00001c"
+                                          {"name" "MD.MP.ProgTotalWelds"
+                                           "optype" "numeric"}
+                                          "000026"
+                                          {"name"
+                                           "MD.MP.WeldCurrentReferenceNegative"
+                                           "optype" "numeric"}
+                                          "000004"
+                                          {"name" "mqtt.name"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000045"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideForwardSlidePosition"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00000b"
+                                          {"name" "mqtt.t.e.standard"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000066"
+                                          {"name" "StudSeries"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00001f"
+                                          {"name" "MD.MP.WeldProcess"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000086"
+                                          {"name" "LMLiftHeightReference"
+                                           "optype" "numeric"}
+                                          "000070"
+                                          {"name" "StudModelDescription"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000014"
+                                          {"name" "MD.MP.InternalStudID"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00009c"
+                                          {"name" "current_Top_3_FREQ"
+                                           "optype" "numeric"}
+                                          "000011"
+                                          {"name" "MD.MP.DeviceName"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00002f"
+                                          {"name"
+                                           "MD.MP.ProtectiveGasFlowDuringWeldprocessActive"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "0000a7"
+                                          {"name" "liftpos_Top_3_AMP"
+                                           "optype" "numeric"}
+                                          "000002-1"
+                                          {"name" "timestamp.month"
+                                           "optype" "numeric"}
+                                          "00007d"
+                                          {"name" "WeldTimeUpperLimit"
+                                           "optype" "numeric"}
+                                          "000076"
+                                          {"name" "OutletNo"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00002e"
+                                          {"name"
+                                           "MD.MP.ProtectiveGasPreFlowActive"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000046"
+                                          {"name"
+                                           "MD.MP.WeldToolSlidePositionDataValid"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000030"
+                                          {"name"
+                                           "MD.MP.ProtectiveGasPostFlowActive"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00003d"
+                                          {"name"
+                                           "MD.MP.RepeatedWOPsCountPermitted"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000042"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideForwardMoveTime"
+                                           "optype" "numeric"}
+                                          "000027"
+                                          {"name"
+                                           "MD.MP.WeldCurrentActualNegative"
+                                           "optype" "numeric"}
+                                          "000037"
+                                          {"name" "MD.MP.MACProcessActive"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000065"
+                                          {"name" "studSize"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000077"
+                                          {"name"
+                                           "WeldCurrentActualPositive"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00009b"
+                                          {"name" "current_Top_3_AMP"
+                                           "optype" "numeric"}
+                                          "0000a5"
+                                          {"name" "liftpos_Top_2_AMP"
+                                           "optype" "numeric"}
+                                          "000062"
+                                          {"name" "robot"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00009f"
+                                          {"name" "voltage_Top_2_AMP"
+                                           "optype" "numeric"}
+                                          "00007b"
+                                          {"name" "WeldTimeActual"
+                                           "optype" "numeric"}
+                                          "00004b"
+                                          {"name" "MD.MP.FeedingDataValid"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00004c"
+                                          {"name"
+                                           "MD.MP.WeldToolMoveTimeLoadingPinBackward"
+                                           "optype" "numeric"}
+                                          "00003b"
+                                          {"name"
+                                           "MD.MP.CleaningAirBlowActive"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000085"
+                                          {"name" "LMLiftHeightActual"
+                                           "optype" "numeric"}
+                                          "000079"
+                                          {"name" "WeldCurrentUpperLimit"
+                                           "optype" "numeric"}
+                                          "00005e"
+                                          {"name" "series"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000073"
+                                          {"name" "FeederNo"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "0000a2"
+                                          {"name" "voltage_Top_3_FREQ"
+                                           "optype" "numeric"}
+                                          "00004e"
+                                          {"name"
+                                           "MD.MP.WeldToolLoadingPinDataValid"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000082"
+                                          {"name" "PilotVoltageActual"
+                                           "optype" "numeric"}
+                                          "000063"
+                                          {"name" "tool"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00007e"
+                                          {"name" "WeldTimeLowerLimit"
+                                           "optype" "numeric"}
+                                          "000084"
+                                          {"name" "PilotVoltageLowerLimit"
+                                           "optype" "numeric"}
+                                          "00008c"
+                                          {"name" "LMPenetrationReference"
+                                           "optype" "numeric"}
+                                          "000038"
+                                          {"name"
+                                           "MD.MP.MACProcessSuccessful"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000012"
+                                          {"name" "MD.MP.Devicetype"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "000099"
+                                          {"name" "current_Top_2_AMP"
+                                           "optype" "numeric"}
+                                          "00008a"
+                                          {"name" "DropTimeReference"
+                                           "optype" "numeric"}
+                                          "00006b"
+                                          {"name" "StudPlant"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00006f"
+                                          {"name" "StudVariantDescription"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "0000ac"
+                                          {"name" "Q_Status"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}
+                                          "00006d"
+                                          {"name" "StudTypeDescription"
+                                           "optype" "categorical"
+                                           "term_analysis" {"enabled" true}}}}
+                                        initial_source)))
+
+;; Set objective field in dataset
+(define dataset_set_obj
+  (create-and-wait-dataset (bigml.fields.to-ids {"source" updated_source
+                                                 "all_fields" true
+                                                 "objective_field"
+                                                 {"id" "0000ab"
+                                                  "name" "WIP"}}
+                                                updated_source)))
+
+;; Main dataset
+(define main_dataset
+  (update-and-wait dataset_set_obj
+                   (bigml.fields.to-ids {"fields"
+                                         {"MD.MP.WeldToolSlideForwardSlidePosition"
+                                          {"preferred" false}
+                                          "station" {"preferred" false}
+                                          "MD.MP.CoolingAirActive"
+                                          {"preferred" false}
+                                          "MD.MP.WeldToolGripperValueOpenActual"
+                                          {"preferred" false}
+                                          "MD.MP.WeldToolGripperValueDataValid"
+                                          {"preferred" false}
+                                          "MD.MP.WeldToolStudBlockValueActual"
+                                          {"preferred" false}
+                                          "MD.MP.Optimized"
+                                          {"preferred" false}
+                                          "FeederNo" {"preferred" false}
+                                          "MD.MP.MACCurrentReference"
+                                          {"preferred" false}
+                                          "mqtt.name" {"preferred" false}
+                                          "mqtt.t.e.compressed"
+                                          {"preferred" false}
+                                          "mqtt.t.e.typ"
+                                          {"preferred" false}
+                                          "mqtt.t.e.root"
+                                          {"preferred" false}
+                                          "StudToolDescription"
+                                          {"preferred" false}
+                                          "WeldVoltagePeakActual"
+                                          {"preferred" false}
+                                          "PilotVoltageLowerLimit"
+                                          {"preferred" false}
+                                          "MD.MP.WeldVoltagePeakReference"
+                                          {"preferred" false}
+                                          "WeldVoltageDropActual"
+                                          {"preferred" false}
+                                          "series" {"preferred" false}
+                                          "mqtt.t.e.standard"
+                                          {"preferred" false}
+                                          "MD.MP.MACProcessActive"
+                                          {"preferred" false}
+                                          "timestamp.year"
+                                          {"preferred" false}
+                                          "MD.MP.WeldToolGripperCorrectionValue"
+                                          {"preferred" false}
+                                          "mqtt.t.e.typ_version"
+                                          {"preferred" false}
+                                          "studSize" {"preferred" false}
+                                          "mqtt.t.e.format"
+                                          {"preferred" false}
+                                          "MD.MP.WeldToolSlideForwardDataValid"
+                                          {"preferred" false}
+                                          "mqtt.t.e.environment"
+                                          {"preferred" false}
+                                          "WeldEnergyLowerLimit"
+                                          {"preferred" false}
+                                          "mqtt.t.e.subtyp"
+                                          {"preferred" false}
+                                          "MD.MP.CleanVoltageLowerLimit"
+                                          {"preferred" false}
+                                          "tool" {"preferred" false}
+                                          "mqtt.t.e.version"
+                                          {"preferred" false}
+                                          "MD.MP.WeldVoltageDropReference"
+                                          {"preferred" false}
+                                          "plant" {"preferred" false}
+                                          "MD.MP.WeldToolMoveTimeRotationSegmentInFeedPosition"
+                                          {"preferred" false}
+                                          "MD.MP.InternalStudID"
+                                          {"preferred" false}
+                                          "MD.MP.CleaningAirBlowActive"
+                                          {"preferred" false}
+                                          "MD.MP.WeldToolMoveTimeRotationSegmentInPickupPosition"
+                                          {"preferred" false}
+                                          "MD.MP.WeldToolGripperCloseMoveTimeActual"
+                                          {"preferred" false}
+                                          "MD.MP.WeldToolPickupValueDataValid"
+                                          {"preferred" false}
+                                          "MD.MP.ToolNo"
+                                          {"preferred" false}
+                                          "MD.MP.ProtectiveGasPreFlowActive"
+                                          {"preferred" false}
+                                          "MD.MP.MACCurrentActual"
+                                          {"preferred" false}
+                                          "WeldVoltageUpperLimit"
+                                          {"preferred" false}
+                                          "MD.MP.WeldMode"
+                                          {"preferred" false}
+                                          "LMLiftHeightReference"
+                                          {"preferred" false}
+                                          "MD.MP.DeviceName"
+                                          {"preferred" false}
+                                          "WeldVoltageLowerLimit"
+                                          {"preferred" false}
+                                          "MD.MP.WeldToolSlidePositionDataValid"
+                                          {"preferred" false}
+                                          "uniqueID" {"preferred" false}
+                                          "LMLiftHeightUpperLimit"
+                                          {"preferred" false}
+                                          "mqtt.t.e.location_id"
+                                          {"preferred" false}
+                                          "StudVariantDescription"
+                                          {"preferred" false}
+                                          "line" {"preferred" false}
+                                          "timestamp.month"
+                                          {"preferred" false}
+                                          "WeldCurrentUpperLimit"
+                                          {"preferred" false}
+                                          "WeldEnergyUpperLimit"
+                                          {"preferred" false}
+                                          "MD.MP.ProtectiveGasPostFlowActive"
+                                          {"preferred" false}
+                                          "LMLiftHeightLowerLimit"
+                                          {"preferred" false}
+                                          "WeldCurrentLowerLimit"
+                                          {"preferred" false}
+                                          "StudPlant" {"preferred" false}
+                                          "StudVariant" {"preferred" false}
+                                          "mqtt.t.e.plant_id"
+                                          {"preferred" false}
+                                          "MD.MP.MACProcessSuccessful"
+                                          {"preferred" false}
+                                          "MD.MP.WeldToolStudBlockDataValid"
+                                          {"preferred" false}
+                                          "studType_" {"preferred" false}
+                                          "CarbodyID" {"preferred" false}
+                                          "mqtt.t.e.name"
+                                          {"preferred" false}
+                                          "StudPlantDescription"
+                                          {"preferred" false}
+                                          "StudID" {"preferred" false}
+                                          "MD.MP.CleanVoltageUpperLimit"
+                                          {"preferred" false}
+                                          "PilotVoltageUpperLimit"
+                                          {"preferred" false}
+                                          "OutletNo" {"preferred" false}
+                                          "DeviceGeneration"
+                                          {"preferred" false}
+                                          "MD.MP.OptimizationReference"
+                                          {"preferred" false}
+                                          "timestamp" {"preferred" false}
+                                          "MD.MP.WeldToolRotationSegmentDataValid"
+                                          {"preferred" false}
+                                          "MD.MP.WeldToolSlideBackwardDataValid"
+                                          {"preferred" false}
+                                          "MD.MP.ProtectiveGasFlowDuringWeldprocessActive"
+                                          {"preferred" false}
+                                          "location" {"preferred" false}
+                                          "MD.MP.WeldToolGripperOpenMoveTimeActual"
+                                          {"preferred" false}
+                                          "MD.MP.WeldToolPickupRotationAnglePosition"
+                                          {"preferred" false}
+                                          "MD.MP.WeldToolGripperValueStudActual"
+                                          {"preferred" false}
+                                          "MD.MP.RepeatedWOPsCountPermitted"
+                                          {"preferred" false}
+                                          "MD.MP.TRRotationAngleActual"
+                                          {"preferred" false}
+                                          "StudTool" {"preferred" false}
+                                          "fingerprint" {"preferred" false}
+                                          "WeldToolType"
+                                          {"preferred" false}
+                                          "robot" {"preferred" false}
+                                          "MD.MP.StudID"
+                                          {"preferred" false}
+                                          "MD.MP.CleanSuccessful"
+                                          {"preferred" false}
+                                          "MD.MP.Remarks"
+                                          {"preferred" false}
+                                          "DropTimeReference"
+                                          {"preferred" false}
+                                          "StudSeries" {"preferred" false}
+                                          "MD.MP.Devicetype"
+                                          {"preferred" false}}
+                                         "objective_field"
+                                         {"id" "0000ac" "name" "Q_Status"}}
+                                        dataset_set_obj)))
+
+;; Association Discovery
+(define association1
+  (create-and-wait-association {"dataset" main_dataset
+                                "min_support" 1.0E-4
+                                "rhs_predicate"
+                                [{"field" "0000ab"
+                                  "operator" "="
+                                  "value" "0"}]
+                                "input_fields"
+                                ["timestamp.day-of-month"
+                                 "timestamp.day-of-week"
+                                 "timestamp.hour"
+                                 "timestamp.minute"
+                                 "timestamp.second"
+                                 "MD.MP.WeldStartMode"
+                                 "MD.MP.SystemTotalWelds"
+                                 "MD.MP.OutletTotalWelds"
+                                 "MD.MP.OutletTotalWOPs"
+                                 "MD.MP.WeldToolTotalWelds"
+                                 "MD.MP.ProgTotalWelds"
+                                 "MD.MP.StudReloadCountMissingStud"
+                                 "MD.MP.StudReloadCountNoSOW"
+                                 "MD.MP.WeldProcess"
+                                 "MD.MP.PilotCurrentActual"
+                                 "MD.MP.PilotTimeActual"
+                                 "MD.MP.WeldCurrentReferenceNegative"
+                                 "MD.MP.WeldCurrentActualNegative"
+                                 "MD.MP.LMPositionActual"
+                                 "MD.MP.LiftFinishedMode"
+                                 "MD.MP.StickoutReference"
+                                 "MD.MP.StickoutLowerLimit"
+                                 "MD.MP.StickoutUpperLimit"
+                                 "MD.MP.CleanCurrentActual"
+                                 "MD.MP.CleanOccured"
+                                 "MD.MP.CleanVoltageActual"
+                                 "MD.MP.Message"
+                                 "MD.MP.WeldToolSlideForwardMoveTime"
+                                 "MD.MP.WeldToolSlideForwardResponseTimeActualLeaveBackPosition"
+                                 "MD.MP.WeldToolSlideBackwardMoveTime"
+                                 "MD.MP.FeedingTimeActual"
+                                 "MD.MP.FeedingTimeStudInTube"
+                                 "MD.MP.FeedingDataValid"
+                                 "MD.MP.WeldToolMoveTimeLoadingPinBackward"
+                                 "MD.MP.WeldToolMoveTimeLoadingPinForward"
+                                 "MD.MP.WeldToolLoadingPinDataValid"
+                                 "StudType"
+                                 "StudLeftRightHand"
+                                 "StudModel"
+                                 "StudTypeDescription"
+                                 "StudLeftRightHandDescription"
+                                 "StudModelDescription"
+                                 "ProgTotalWOPs"
+                                 "WeldCurrentActualPositive"
+                                 "WeldCurrentReferencePositive"
+                                 "WeldTimeActual"
+                                 "WeldTimeReference"
+                                 "WeldTimeUpperLimit"
+                                 "WeldTimeLowerLimit"
+                                 "WeldVoltageActual"
+                                 "PilotVoltageActual"
+                                 "LMLiftHeightActual"
+                                 "DropTimeActual"
+                                 "LMPenetrationActual"
+                                 "LMPenetrationReference"
+                                 "LMPenetrationUpperLimit"
+                                 "LMPenetrationLowerLimit"
+                                 "WeldEnergyActual"
+                                 "StickoutActual"
+                                 "CleanTimeActual"
+                                 "current_Top_1_AMP"
+                                 "current_Top_1_FREQ"
+                                 "current_Top_2_AMP"
+                                 "current_Top_2_FREQ"
+                                 "current_Top_3_AMP"
+                                 "current_Top_3_FREQ"
+                                 "voltage_Top_1_AMP"
+                                 "voltage_Top_1_FREQ"
+                                 "voltage_Top_2_AMP"
+                                 "voltage_Top_2_FREQ"
+                                 "voltage_Top_3_AMP"
+                                 "voltage_Top_3_FREQ"
+                                 "liftpos_Top_1_AMP"
+                                 "liftpos_Top_1_FREQ"
+                                 "liftpos_Top_2_AMP"
+                                 "liftpos_Top_2_FREQ"
+                                 "liftpos_Top_3_AMP"
+                                 "liftpos_Top_3_FREQ"
+                                 "WIP"]
+                                "discretization"
+                                {"pretty" true
+                                 "size" 5
+                                 "trim" 0.0
+                                 "type" "population"}}))
+
+;; Cluster
+(define cluster1
+  (create-and-wait-cluster {"dataset" main_dataset
+                            "default_numeric_value" "median"
+                            "seed" "c71814f0fb38391a53976be721e8c5e2"
+                            "cluster_seed"
+                            "2c249dda00fbf54ab4cdd850532a584f286af5b6"
+                            "input_fields"
+                            ["current_Top_1_AMP"
+                             "current_Top_1_FREQ"
+                             "current_Top_2_AMP"
+                             "current_Top_2_FREQ"
+                             "current_Top_3_AMP"
+                             "current_Top_3_FREQ"
+                             "voltage_Top_1_AMP"
+                             "voltage_Top_1_FREQ"
+                             "voltage_Top_2_AMP"
+                             "voltage_Top_2_FREQ"
+                             "voltage_Top_3_AMP"
+                             "voltage_Top_3_FREQ"
+                             "liftpos_Top_1_AMP"
+                             "liftpos_Top_1_FREQ"
+                             "liftpos_Top_2_AMP"
+                             "liftpos_Top_2_FREQ"
+                             "liftpos_Top_3_AMP"
+                             "liftpos_Top_3_FREQ"]
+                            "critical_value" 1}))
+
+;; Batch Centroid
+(define batchcentroid1
+  (create-and-wait-batchcentroid {"cluster" cluster1
+                                  "dataset" main_dataset
+                                  "all_fields" true
+                                  "output_dataset" true}))
+
+;; Batch Centroid Dataset
+(define dataset3
+  ((fetch batchcentroid1) ["output_dataset_resource"] false))
+
+;; Batch Centroid Dataset
+(define dataset4
+  (update-and-wait dataset3
+                   (bigml.fields.to-ids {"fields"
+                                         {"000095"
+                                          {"name" "CleanTimeActual"
+                                           "preferred" true}
+                                          "000005"
+                                          {"name" "mqtt.t.e.root"
+                                           "preferred" false}
+                                          "000044"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideForwardDataValid"
+                                           "preferred" false}
+                                          "000022"
+                                          {"name"
+                                           "MD.MP.PilotCurrentActual"
+                                           "preferred" true}
+                                          "00002d"
+                                          {"name"
+                                           "MD.MP.TRRotationAngleActual"
+                                           "preferred" false}
+                                          "000078"
+                                          {"name"
+                                           "WeldCurrentReferencePositive"
+                                           "preferred" true}
+                                          "00001e"
+                                          {"name"
+                                           "MD.MP.StudReloadCountNoSOW"
+                                           "preferred" true}
+                                          "000050"
+                                          {"name"
+                                           "MD.MP.WeldToolMoveTimeRotationSegmentInPickupPosition"
+                                           "preferred" false}
+                                          "00000f"
+                                          {"name" "mqtt.t.e.subtyp"
+                                           "preferred" false}
+                                          "000067"
+                                          {"name" "StudType"
+                                           "preferred" true}
+                                          "00000c"
+                                          {"name" "mqtt.t.e.plant_id"
+                                           "preferred" false}
+                                          "000053"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperValueDataValid"
+                                           "preferred" false}
+                                          "000041"
+                                          {"name" "MD.MP.Message"
+                                           "preferred" true}
+                                          "000021"
+                                          {"name" "MD.MP.Optimized"
+                                           "preferred" false}
+                                          "000052"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperValueStudActual"
+                                           "preferred" false}
+                                          "000075"
+                                          {"name" "ProgTotalWOPs"
+                                           "preferred" true}
+                                          "000097"
+                                          {"name" "current_Top_1_AMP"
+                                           "preferred" true}
+                                          "000068"
+                                          {"name" "StudLeftRightHand"
+                                           "preferred" true}
+                                          "000043"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideForwardResponseTimeActualLeaveBackPosition"
+                                           "preferred" true}
+                                          "000003"
+                                          {"name" "CarbodyID"
+                                           "preferred" false}
+                                          "000023"
+                                          {"name" "MD.MP.PilotTimeActual"
+                                           "preferred" true}
+                                          "000039"
+                                          {"name"
+                                           "MD.MP.MACCurrentReference"
+                                           "preferred" false}
+                                          "000071"
+                                          {"name" "StudPlantDescription"
+                                           "preferred" false}
+                                          "00002a"
+                                          {"name" "MD.MP.StickoutReference"
+                                           "preferred" true}
+                                          "000060"
+                                          {"name" "plant" "preferred" false}
+                                          "00001d"
+                                          {"name"
+                                           "MD.MP.StudReloadCountMissingStud"
+                                           "preferred" true}
+                                          "000074"
+                                          {"name" "WeldToolType"
+                                           "preferred" false}
+                                          "000056"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperCloseMoveTimeActual"
+                                           "preferred" false}
+                                          "000064"
+                                          {"name" "studType_"
+                                           "preferred" false}
+                                          "00008f"
+                                          {"name" "WeldEnergyActual"
+                                           "preferred" true}
+                                          "000010"
+                                          {"name" "mqtt.t.e.version"
+                                           "preferred" false}
+                                          "00000d"
+                                          {"name" "mqtt.t.e.typ"
+                                           "preferred" false}
+                                          "00004a"
+                                          {"name"
+                                           "MD.MP.FeedingTimeStudInTube"
+                                           "preferred" true}
+                                          "000002-2"
+                                          {"name" "timestamp.day-of-month"
+                                           "preferred" true}
+                                          "000029"
+                                          {"name" "MD.MP.LiftFinishedMode"
+                                           "preferred" true}
+                                          "000049"
+                                          {"name" "MD.MP.FeedingTimeActual"
+                                           "preferred" true}
+                                          "00003a"
+                                          {"name" "MD.MP.MACCurrentActual"
+                                           "preferred" false}
+                                          "000017"
+                                          {"name" "MD.MP.WeldMode"
+                                           "preferred" false}
+                                          "0000a4"
+                                          {"name" "liftpos_Top_1_FREQ"
+                                           "preferred" true}
+                                          "000047"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideBackwardMoveTime"
+                                           "preferred" true}
+                                          "000020"
+                                          {"name"
+                                           "MD.MP.OptimizationReference"
+                                           "preferred" false}
+                                          "000019"
+                                          {"name" "MD.MP.OutletTotalWelds"
+                                           "preferred" true}
+                                          "00002c"
+                                          {"name"
+                                           "MD.MP.StickoutUpperLimit"
+                                           "preferred" true}
+                                          "0000a3"
+                                          {"name" "liftpos_Top_1_AMP"
+                                           "preferred" true}
+                                          "00002b"
+                                          {"name"
+                                           "MD.MP.StickoutLowerLimit"
+                                           "preferred" true}
+                                          "00006e"
+                                          {"name"
+                                           "StudLeftRightHandDescription"
+                                           "preferred" true}
+                                          "000015"
+                                          {"name" "MD.MP.ToolNo"
+                                           "preferred" false}
+                                          "000090"
+                                          {"name" "WeldEnergyUpperLimit"
+                                           "preferred" false}
+                                          "000033"
+                                          {"name" "MD.MP.CleanSuccessful"
+                                           "preferred" false}
+                                          "000016"
+                                          {"name" "MD.MP.WeldStartMode"
+                                           "preferred" true}
+                                          "000048"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideBackwardDataValid"
+                                           "preferred" false}
+                                          "000013"
+                                          {"name" "MD.MP.StudID"
+                                           "preferred" false}
+                                          "000096"
+                                          {"name" "DeviceGeneration"
+                                           "preferred" false}
+                                          "0000a8"
+                                          {"name" "liftpos_Top_3_FREQ"
+                                           "preferred" true}
+                                          "000057"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperOpenMoveTimeActual"
+                                           "preferred" false}
+                                          "00007a"
+                                          {"name" "WeldCurrentLowerLimit"
+                                           "preferred" false}
+                                          "000098"
+                                          {"name" "current_Top_1_FREQ"
+                                           "preferred" true}
+                                          "000091"
+                                          {"name" "WeldEnergyLowerLimit"
+                                           "preferred" false}
+                                          "00004f"
+                                          {"name"
+                                           "MD.MP.WeldToolMoveTimeRotationSegmentInFeedPosition"
+                                           "preferred" false}
+                                          "00009d"
+                                          {"name" "voltage_Top_1_AMP"
+                                           "preferred" true}
+                                          "00005b"
+                                          {"name"
+                                           "MD.MP.WeldToolStudBlockDataValid"
+                                           "preferred" false}
+                                          "000051"
+                                          {"name"
+                                           "MD.MP.WeldToolRotationSegmentDataValid"
+                                           "preferred" false}
+                                          "000024"
+                                          {"name"
+                                           "MD.MP.WeldVoltagePeakReference"
+                                           "preferred" false}
+                                          "1000b4"
+                                          {"name" "cluster"
+                                           "preferred" false}
+                                          "000088"
+                                          {"name" "LMLiftHeightLowerLimit"
+                                           "preferred" false}
+                                          "00005a"
+                                          {"name"
+                                           "MD.MP.WeldToolStudBlockValueActual"
+                                           "preferred" false}
+                                          "00003e"
+                                          {"name"
+                                           "MD.MP.RepeatedWOPsCountOutletActual"
+                                           "preferred" true}
+                                          "0000a9"
+                                          {"name" "MD.MP.Quality"
+                                           "preferred" true}
+                                          "000001"
+                                          {"name" "StudID"
+                                           "preferred" false}
+                                          "000018"
+                                          {"name" "MD.MP.SystemTotalWelds"
+                                           "preferred" true}
+                                          "00006a"
+                                          {"name" "StudModel"
+                                           "preferred" true}
+                                          "00009e"
+                                          {"name" "voltage_Top_1_FREQ"
+                                           "preferred" true}
+                                          "00005f"
+                                          {"name" "line" "preferred" false}
+                                          "000083"
+                                          {"name" "PilotVoltageUpperLimit"
+                                           "preferred" false}
+                                          "000072"
+                                          {"name" "StudToolDescription"
+                                           "preferred" false}
+                                          "000032"
+                                          {"name" "MD.MP.CleanOccured"
+                                           "preferred" true}
+                                          "00005c"
+                                          {"name" "uniqueID"
+                                           "preferred" false}
+                                          "000002"
+                                          {"name" "timestamp"
+                                           "preferred" false}
+                                          "000002-6"
+                                          {"name" "timestamp.second"
+                                           "preferred" true}
+                                          "00007c"
+                                          {"name" "WeldTimeReference"
+                                           "preferred" true}
+                                          "000059"
+                                          {"name"
+                                           "MD.MP.WeldToolPickupValueDataValid"
+                                           "preferred" false}
+                                          "0000ab"
+                                          {"name" "WIP" "preferred" true}
+                                          "000089"
+                                          {"name" "DropTimeActual"
+                                           "preferred" true}
+                                          "00000e"
+                                          {"name" "mqtt.t.e.typ_version"
+                                           "preferred" false}
+                                          "000008"
+                                          {"name" "mqtt.t.e.location_id"
+                                           "preferred" false}
+                                          "00009a"
+                                          {"name" "current_Top_2_FREQ"
+                                           "preferred" true}
+                                          "000036"
+                                          {"name"
+                                           "MD.MP.CleanVoltageUpperLimit"
+                                           "preferred" false}
+                                          "000025"
+                                          {"name"
+                                           "MD.MP.WeldVoltageDropReference"
+                                           "preferred" false}
+                                          "00003c"
+                                          {"name" "MD.MP.CoolingAirActive"
+                                           "preferred" false}
+                                          "00008b"
+                                          {"name" "LMPenetrationActual"
+                                           "preferred" true}
+                                          "000034"
+                                          {"name"
+                                           "MD.MP.CleanVoltageActual"
+                                           "preferred" true}
+                                          "000092"
+                                          {"name" "WeldVoltagePeakActual"
+                                           "preferred" false}
+                                          "00000a"
+                                          {"name" "mqtt.t.e.compressed"
+                                           "preferred" false}
+                                          "00001a"
+                                          {"name" "MD.MP.OutletTotalWOPs"
+                                           "preferred" true}
+                                          "00006c"
+                                          {"name" "StudTool"
+                                           "preferred" false}
+                                          "000093"
+                                          {"name" "WeldVoltageDropActual"
+                                           "preferred" false}
+                                          "000009"
+                                          {"name" "mqtt.t.e.format"
+                                           "preferred" false}
+                                          "000094"
+                                          {"name" "StickoutActual"
+                                           "preferred" true}
+                                          "0000a1"
+                                          {"name" "voltage_Top_3_AMP"
+                                           "preferred" true}
+                                          "0000a0"
+                                          {"name" "voltage_Top_2_FREQ"
+                                           "preferred" true}
+                                          "000055"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperValueOpenActual"
+                                           "preferred" false}
+                                          "00001b"
+                                          {"name"
+                                           "MD.MP.WeldToolTotalWelds"
+                                           "preferred" true}
+                                          "000002-0"
+                                          {"name" "timestamp.year"
+                                           "preferred" false}
+                                          "000069"
+                                          {"name" "StudVariant"
+                                           "preferred" false}
+                                          "00007f"
+                                          {"name" "WeldVoltageActual"
+                                           "preferred" true}
+                                          "000028"
+                                          {"name" "MD.MP.LMPositionActual"
+                                           "preferred" true}
+                                          "00003f"
+                                          {"name"
+                                           "MD.MP.RepeatedWOPsCountWeldProgram"
+                                           "preferred" true}
+                                          "000007"
+                                          {"name" "mqtt.t.e.environment"
+                                           "preferred" false}
+                                          "00004d"
+                                          {"name"
+                                           "MD.MP.WeldToolMoveTimeLoadingPinForward"
+                                           "preferred" true}
+                                          "000058"
+                                          {"name"
+                                           "MD.MP.WeldToolPickupRotationAnglePosition"
+                                           "preferred" false}
+                                          "0000a6"
+                                          {"name" "liftpos_Top_2_FREQ"
+                                           "preferred" true}
+                                          "000031"
+                                          {"name"
+                                           "MD.MP.CleanCurrentActual"
+                                           "preferred" true}
+                                          "000061"
+                                          {"name" "station"
+                                           "preferred" false}
+                                          "0000aa"
+                                          {"name" "MD.MP.FaultCode"
+                                           "preferred" true}
+                                          "000040"
+                                          {"name" "MD.MP.Remarks"
+                                           "preferred" false}
+                                          "00008e"
+                                          {"name" "LMPenetrationLowerLimit"
+                                           "preferred" true}
+                                          "000054"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperCorrectionValue"
+                                           "preferred" false}
+                                          "000087"
+                                          {"name" "LMLiftHeightUpperLimit"
+                                           "preferred" false}
+                                          "000081"
+                                          {"name" "WeldVoltageLowerLimit"
+                                           "preferred" false}
+                                          "000002-3"
+                                          {"name" "timestamp.day-of-week"
+                                           "preferred" true}
+                                          "000080"
+                                          {"name" "WeldVoltageUpperLimit"
+                                           "preferred" false}
+                                          "00008d"
+                                          {"name" "LMPenetrationUpperLimit"
+                                           "preferred" true}
+                                          "000000"
+                                          {"name" "fingerprint"
+                                           "preferred" false}
+                                          "000035"
+                                          {"name"
+                                           "MD.MP.CleanVoltageLowerLimit"
+                                           "preferred" false}
+                                          "000006"
+                                          {"name" "mqtt.t.e.name"
+                                           "preferred" false}
+                                          "000002-5"
+                                          {"name" "timestamp.minute"
+                                           "preferred" true}
+                                          "000002-4"
+                                          {"name" "timestamp.hour"
+                                           "preferred" true}
+                                          "00005d"
+                                          {"name" "location"
+                                           "preferred" false}
+                                          "00001c"
+                                          {"name" "MD.MP.ProgTotalWelds"
+                                           "preferred" true}
+                                          "000026"
+                                          {"name"
+                                           "MD.MP.WeldCurrentReferenceNegative"
+                                           "preferred" true}
+                                          "000004"
+                                          {"name" "mqtt.name"
+                                           "preferred" false}
+                                          "000045"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideForwardSlidePosition"
+                                           "preferred" false}
+                                          "00000b"
+                                          {"name" "mqtt.t.e.standard"
+                                           "preferred" false}
+                                          "000066"
+                                          {"name" "StudSeries"
+                                           "preferred" false}
+                                          "00001f"
+                                          {"name" "MD.MP.WeldProcess"
+                                           "preferred" true}
+                                          "000086"
+                                          {"name" "LMLiftHeightReference"
+                                           "preferred" false}
+                                          "000070"
+                                          {"name" "StudModelDescription"
+                                           "preferred" true}
+                                          "000014"
+                                          {"name" "MD.MP.InternalStudID"
+                                           "preferred" false}
+                                          "00009c"
+                                          {"name" "current_Top_3_FREQ"
+                                           "preferred" true}
+                                          "000011"
+                                          {"name" "MD.MP.DeviceName"
+                                           "preferred" false}
+                                          "00002f"
+                                          {"name"
+                                           "MD.MP.ProtectiveGasFlowDuringWeldprocessActive"
+                                           "preferred" false}
+                                          "0000a7"
+                                          {"name" "liftpos_Top_3_AMP"
+                                           "preferred" true}
+                                          "000002-1"
+                                          {"name" "timestamp.month"
+                                           "preferred" false}
+                                          "00007d"
+                                          {"name" "WeldTimeUpperLimit"
+                                           "preferred" true}
+                                          "000076"
+                                          {"name" "OutletNo"
+                                           "preferred" false}
+                                          "00002e"
+                                          {"name"
+                                           "MD.MP.ProtectiveGasPreFlowActive"
+                                           "preferred" false}
+                                          "000046"
+                                          {"name"
+                                           "MD.MP.WeldToolSlidePositionDataValid"
+                                           "preferred" false}
+                                          "000030"
+                                          {"name"
+                                           "MD.MP.ProtectiveGasPostFlowActive"
+                                           "preferred" false}
+                                          "00003d"
+                                          {"name"
+                                           "MD.MP.RepeatedWOPsCountPermitted"
+                                           "preferred" false}
+                                          "000042"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideForwardMoveTime"
+                                           "preferred" true}
+                                          "000027"
+                                          {"name"
+                                           "MD.MP.WeldCurrentActualNegative"
+                                           "preferred" true}
+                                          "000037"
+                                          {"name" "MD.MP.MACProcessActive"
+                                           "preferred" false}
+                                          "000065"
+                                          {"name" "studSize"
+                                           "preferred" false}
+                                          "000077"
+                                          {"name"
+                                           "WeldCurrentActualPositive"
+                                           "preferred" true}
+                                          "00009b"
+                                          {"name" "current_Top_3_AMP"
+                                           "preferred" true}
+                                          "0000a5"
+                                          {"name" "liftpos_Top_2_AMP"
+                                           "preferred" true}
+                                          "000062"
+                                          {"name" "robot" "preferred" false}
+                                          "00009f"
+                                          {"name" "voltage_Top_2_AMP"
+                                           "preferred" true}
+                                          "00007b"
+                                          {"name" "WeldTimeActual"
+                                           "preferred" true}
+                                          "00004b"
+                                          {"name" "MD.MP.FeedingDataValid"
+                                           "preferred" true}
+                                          "00004c"
+                                          {"name"
+                                           "MD.MP.WeldToolMoveTimeLoadingPinBackward"
+                                           "preferred" true}
+                                          "00003b"
+                                          {"name"
+                                           "MD.MP.CleaningAirBlowActive"
+                                           "preferred" false}
+                                          "000085"
+                                          {"name" "LMLiftHeightActual"
+                                           "preferred" true}
+                                          "000079"
+                                          {"name" "WeldCurrentUpperLimit"
+                                           "preferred" false}
+                                          "00005e"
+                                          {"name" "series"
+                                           "preferred" false}
+                                          "000073"
+                                          {"name" "FeederNo"
+                                           "preferred" false}
+                                          "0000a2"
+                                          {"name" "voltage_Top_3_FREQ"
+                                           "preferred" true}
+                                          "00004e"
+                                          {"name"
+                                           "MD.MP.WeldToolLoadingPinDataValid"
+                                           "preferred" true}
+                                          "000082"
+                                          {"name" "PilotVoltageActual"
+                                           "preferred" true}
+                                          "000063"
+                                          {"name" "tool" "preferred" false}
+                                          "00007e"
+                                          {"name" "WeldTimeLowerLimit"
+                                           "preferred" true}
+                                          "000084"
+                                          {"name" "PilotVoltageLowerLimit"
+                                           "preferred" false}
+                                          "00008c"
+                                          {"name" "LMPenetrationReference"
+                                           "preferred" true}
+                                          "000038"
+                                          {"name"
+                                           "MD.MP.MACProcessSuccessful"
+                                           "preferred" false}
+                                          "000012"
+                                          {"name" "MD.MP.Devicetype"
+                                           "preferred" false}
+                                          "000099"
+                                          {"name" "current_Top_2_AMP"
+                                           "preferred" true}
+                                          "00008a"
+                                          {"name" "DropTimeReference"
+                                           "preferred" false}
+                                          "00006b"
+                                          {"name" "StudPlant"
+                                           "preferred" false}
+                                          "00006f"
+                                          {"name" "StudVariantDescription"
+                                           "preferred" false}
+                                          "0000ac"
+                                          {"name" "Q_Status"
+                                           "preferred" true}
+                                          "00006d"
+                                          {"name" "StudTypeDescription"
+                                           "preferred" true}}
+                                         "objective_field"
+                                         {"id" "000002-6"
+                                          "name" "timestamp.second"}}
+                                        dataset3)))
+
+;; Anomaly Detector
+(define anomaly1
+  (create-and-wait-anomaly {"dataset" main_dataset
+                            "id_fields"
+                            ["0000a9" "0000ac" "0000aa" "0000ab"]
+                            "seed"
+                            "2c249dda00fbf54ab4cdd850532a584f286af5b6"
+                            "input_fields"
+                            ["timestamp.day-of-month"
+                             "timestamp.day-of-week"
+                             "timestamp.hour"
+                             "timestamp.minute"
+                             "timestamp.second"
+                             "MD.MP.WeldStartMode"
+                             "MD.MP.SystemTotalWelds"
+                             "MD.MP.OutletTotalWelds"
+                             "MD.MP.OutletTotalWOPs"
+                             "MD.MP.WeldToolTotalWelds"
+                             "MD.MP.ProgTotalWelds"
+                             "MD.MP.StudReloadCountMissingStud"
+                             "MD.MP.StudReloadCountNoSOW"
+                             "MD.MP.WeldProcess"
+                             "MD.MP.PilotCurrentActual"
+                             "MD.MP.PilotTimeActual"
+                             "MD.MP.WeldCurrentReferenceNegative"
+                             "MD.MP.WeldCurrentActualNegative"
+                             "MD.MP.LMPositionActual"
+                             "MD.MP.LiftFinishedMode"
+                             "MD.MP.StickoutReference"
+                             "MD.MP.StickoutLowerLimit"
+                             "MD.MP.StickoutUpperLimit"
+                             "MD.MP.CleanCurrentActual"
+                             "MD.MP.CleanOccured"
+                             "MD.MP.CleanVoltageActual"
+                             "MD.MP.RepeatedWOPsCountOutletActual"
+                             "MD.MP.RepeatedWOPsCountWeldProgram"
+                             "MD.MP.Message"
+                             "MD.MP.WeldToolSlideForwardMoveTime"
+                             "MD.MP.WeldToolSlideForwardResponseTimeActualLeaveBackPosition"
+                             "MD.MP.WeldToolSlideBackwardMoveTime"
+                             "MD.MP.FeedingTimeActual"
+                             "MD.MP.FeedingTimeStudInTube"
+                             "MD.MP.FeedingDataValid"
+                             "MD.MP.WeldToolMoveTimeLoadingPinBackward"
+                             "MD.MP.WeldToolMoveTimeLoadingPinForward"
+                             "MD.MP.WeldToolLoadingPinDataValid"
+                             "StudType"
+                             "StudLeftRightHand"
+                             "StudModel"
+                             "StudTypeDescription"
+                             "StudLeftRightHandDescription"
+                             "StudModelDescription"
+                             "ProgTotalWOPs"
+                             "WeldCurrentActualPositive"
+                             "WeldCurrentReferencePositive"
+                             "WeldTimeActual"
+                             "WeldTimeReference"
+                             "WeldTimeUpperLimit"
+                             "WeldTimeLowerLimit"
+                             "WeldVoltageActual"
+                             "PilotVoltageActual"
+                             "LMLiftHeightActual"
+                             "DropTimeActual"
+                             "LMPenetrationActual"
+                             "LMPenetrationReference"
+                             "LMPenetrationUpperLimit"
+                             "LMPenetrationLowerLimit"
+                             "WeldEnergyActual"
+                             "StickoutActual"
+                             "CleanTimeActual"
+                             "current_Top_1_AMP"
+                             "current_Top_1_FREQ"
+                             "current_Top_2_AMP"
+                             "current_Top_2_FREQ"
+                             "current_Top_3_AMP"
+                             "current_Top_3_FREQ"
+                             "voltage_Top_1_AMP"
+                             "voltage_Top_1_FREQ"
+                             "voltage_Top_2_AMP"
+                             "voltage_Top_2_FREQ"
+                             "voltage_Top_3_AMP"
+                             "voltage_Top_3_FREQ"
+                             "liftpos_Top_1_AMP"
+                             "liftpos_Top_1_FREQ"
+                             "liftpos_Top_2_AMP"
+                             "liftpos_Top_2_FREQ"
+                             "liftpos_Top_3_AMP"
+                             "liftpos_Top_3_FREQ"
+                             "MD.MP.Quality"
+                             "MD.MP.FaultCode"
+                             "WIP"
+                             "Q_Status"]
+                            "anomaly_seed"
+                            "2c249dda00fbf54ab4cdd850532a584f286af5b6"}))
+
+;; Batch Anomaly Score
+(define batchanomalyscore1
+  (create-and-wait-batchanomalyscore {"anomaly" anomaly1
+                                      "dataset" main_dataset
+                                      "all_fields" true
+                                      "output_dataset" true}))
+
+;; Batch Anomaly Score Dataset
+(define dataset5
+  ((fetch batchanomalyscore1) ["output_dataset_resource"] false))
+
+;; Batch Anomaly Score Dataset
+(define dataset6
+  (update-and-wait dataset5
+                   (bigml.fields.to-ids {"fields"
+                                         {"000095"
+                                          {"name" "CleanTimeActual"
+                                           "preferred" true}
+                                          "000005"
+                                          {"name" "mqtt.t.e.root"
+                                           "preferred" false}
+                                          "000044"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideForwardDataValid"
+                                           "preferred" false}
+                                          "000022"
+                                          {"name"
+                                           "MD.MP.PilotCurrentActual"
+                                           "preferred" true}
+                                          "00002d"
+                                          {"name"
+                                           "MD.MP.TRRotationAngleActual"
+                                           "preferred" false}
+                                          "000078"
+                                          {"name"
+                                           "WeldCurrentReferencePositive"
+                                           "preferred" true}
+                                          "00001e"
+                                          {"name"
+                                           "MD.MP.StudReloadCountNoSOW"
+                                           "preferred" true}
+                                          "000050"
+                                          {"name"
+                                           "MD.MP.WeldToolMoveTimeRotationSegmentInPickupPosition"
+                                           "preferred" false}
+                                          "00000f"
+                                          {"name" "mqtt.t.e.subtyp"
+                                           "preferred" false}
+                                          "000067"
+                                          {"name" "StudType"
+                                           "preferred" true}
+                                          "00000c"
+                                          {"name" "mqtt.t.e.plant_id"
+                                           "preferred" false}
+                                          "000053"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperValueDataValid"
+                                           "preferred" false}
+                                          "000041"
+                                          {"name" "MD.MP.Message"
+                                           "preferred" true}
+                                          "000021"
+                                          {"name" "MD.MP.Optimized"
+                                           "preferred" false}
+                                          "000052"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperValueStudActual"
+                                           "preferred" false}
+                                          "000075"
+                                          {"name" "ProgTotalWOPs"
+                                           "preferred" true}
+                                          "000097"
+                                          {"name" "current_Top_1_AMP"
+                                           "preferred" true}
+                                          "000068"
+                                          {"name" "StudLeftRightHand"
+                                           "preferred" true}
+                                          "000043"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideForwardResponseTimeActualLeaveBackPosition"
+                                           "preferred" true}
+                                          "000003"
+                                          {"name" "CarbodyID"
+                                           "preferred" false}
+                                          "000023"
+                                          {"name" "MD.MP.PilotTimeActual"
+                                           "preferred" true}
+                                          "000039"
+                                          {"name"
+                                           "MD.MP.MACCurrentReference"
+                                           "preferred" false}
+                                          "000071"
+                                          {"name" "StudPlantDescription"
+                                           "preferred" false}
+                                          "00002a"
+                                          {"name" "MD.MP.StickoutReference"
+                                           "preferred" true}
+                                          "000060"
+                                          {"name" "plant" "preferred" false}
+                                          "00001d"
+                                          {"name"
+                                           "MD.MP.StudReloadCountMissingStud"
+                                           "preferred" true}
+                                          "000074"
+                                          {"name" "WeldToolType"
+                                           "preferred" false}
+                                          "000056"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperCloseMoveTimeActual"
+                                           "preferred" false}
+                                          "000064"
+                                          {"name" "studType_"
+                                           "preferred" false}
+                                          "00008f"
+                                          {"name" "WeldEnergyActual"
+                                           "preferred" true}
+                                          "000010"
+                                          {"name" "mqtt.t.e.version"
+                                           "preferred" false}
+                                          "00000d"
+                                          {"name" "mqtt.t.e.typ"
+                                           "preferred" false}
+                                          "00004a"
+                                          {"name"
+                                           "MD.MP.FeedingTimeStudInTube"
+                                           "preferred" true}
+                                          "000002-2"
+                                          {"name" "timestamp.day-of-month"
+                                           "preferred" true}
+                                          "000029"
+                                          {"name" "MD.MP.LiftFinishedMode"
+                                           "preferred" true}
+                                          "000049"
+                                          {"name" "MD.MP.FeedingTimeActual"
+                                           "preferred" true}
+                                          "00003a"
+                                          {"name" "MD.MP.MACCurrentActual"
+                                           "preferred" false}
+                                          "000017"
+                                          {"name" "MD.MP.WeldMode"
+                                           "preferred" false}
+                                          "0000a4"
+                                          {"name" "liftpos_Top_1_FREQ"
+                                           "preferred" true}
+                                          "000047"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideBackwardMoveTime"
+                                           "preferred" true}
+                                          "000020"
+                                          {"name"
+                                           "MD.MP.OptimizationReference"
+                                           "preferred" false}
+                                          "000019"
+                                          {"name" "MD.MP.OutletTotalWelds"
+                                           "preferred" true}
+                                          "00002c"
+                                          {"name"
+                                           "MD.MP.StickoutUpperLimit"
+                                           "preferred" true}
+                                          "0000a3"
+                                          {"name" "liftpos_Top_1_AMP"
+                                           "preferred" true}
+                                          "00002b"
+                                          {"name"
+                                           "MD.MP.StickoutLowerLimit"
+                                           "preferred" true}
+                                          "00006e"
+                                          {"name"
+                                           "StudLeftRightHandDescription"
+                                           "preferred" true}
+                                          "000015"
+                                          {"name" "MD.MP.ToolNo"
+                                           "preferred" false}
+                                          "000090"
+                                          {"name" "WeldEnergyUpperLimit"
+                                           "preferred" false}
+                                          "000033"
+                                          {"name" "MD.MP.CleanSuccessful"
+                                           "preferred" false}
+                                          "000016"
+                                          {"name" "MD.MP.WeldStartMode"
+                                           "preferred" true}
+                                          "000048"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideBackwardDataValid"
+                                           "preferred" false}
+                                          "000013"
+                                          {"name" "MD.MP.StudID"
+                                           "preferred" false}
+                                          "000096"
+                                          {"name" "DeviceGeneration"
+                                           "preferred" false}
+                                          "0000a8"
+                                          {"name" "liftpos_Top_3_FREQ"
+                                           "preferred" true}
+                                          "000057"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperOpenMoveTimeActual"
+                                           "preferred" false}
+                                          "00007a"
+                                          {"name" "WeldCurrentLowerLimit"
+                                           "preferred" false}
+                                          "000098"
+                                          {"name" "current_Top_1_FREQ"
+                                           "preferred" true}
+                                          "000091"
+                                          {"name" "WeldEnergyLowerLimit"
+                                           "preferred" false}
+                                          "00004f"
+                                          {"name"
+                                           "MD.MP.WeldToolMoveTimeRotationSegmentInFeedPosition"
+                                           "preferred" false}
+                                          "00009d"
+                                          {"name" "voltage_Top_1_AMP"
+                                           "preferred" true}
+                                          "00005b"
+                                          {"name"
+                                           "MD.MP.WeldToolStudBlockDataValid"
+                                           "preferred" false}
+                                          "000051"
+                                          {"name"
+                                           "MD.MP.WeldToolRotationSegmentDataValid"
+                                           "preferred" false}
+                                          "000024"
+                                          {"name"
+                                           "MD.MP.WeldVoltagePeakReference"
+                                           "preferred" false}
+                                          "1000b4"
+                                          {"name" "score" "preferred" true}
+                                          "000088"
+                                          {"name" "LMLiftHeightLowerLimit"
+                                           "preferred" false}
+                                          "00005a"
+                                          {"name"
+                                           "MD.MP.WeldToolStudBlockValueActual"
+                                           "preferred" false}
+                                          "00003e"
+                                          {"name"
+                                           "MD.MP.RepeatedWOPsCountOutletActual"
+                                           "preferred" true}
+                                          "0000a9"
+                                          {"name" "MD.MP.Quality"
+                                           "preferred" true}
+                                          "000001"
+                                          {"name" "StudID"
+                                           "preferred" false}
+                                          "000018"
+                                          {"name" "MD.MP.SystemTotalWelds"
+                                           "preferred" true}
+                                          "00006a"
+                                          {"name" "StudModel"
+                                           "preferred" true}
+                                          "00009e"
+                                          {"name" "voltage_Top_1_FREQ"
+                                           "preferred" true}
+                                          "00005f"
+                                          {"name" "line" "preferred" false}
+                                          "000083"
+                                          {"name" "PilotVoltageUpperLimit"
+                                           "preferred" false}
+                                          "000072"
+                                          {"name" "StudToolDescription"
+                                           "preferred" false}
+                                          "000032"
+                                          {"name" "MD.MP.CleanOccured"
+                                           "preferred" true}
+                                          "00005c"
+                                          {"name" "uniqueID"
+                                           "preferred" false}
+                                          "000002"
+                                          {"name" "timestamp"
+                                           "preferred" false}
+                                          "000002-6"
+                                          {"name" "timestamp.second"
+                                           "preferred" true}
+                                          "00007c"
+                                          {"name" "WeldTimeReference"
+                                           "preferred" true}
+                                          "000059"
+                                          {"name"
+                                           "MD.MP.WeldToolPickupValueDataValid"
+                                           "preferred" false}
+                                          "0000ab"
+                                          {"name" "WIP" "preferred" true}
+                                          "000089"
+                                          {"name" "DropTimeActual"
+                                           "preferred" true}
+                                          "00000e"
+                                          {"name" "mqtt.t.e.typ_version"
+                                           "preferred" false}
+                                          "000008"
+                                          {"name" "mqtt.t.e.location_id"
+                                           "preferred" false}
+                                          "00009a"
+                                          {"name" "current_Top_2_FREQ"
+                                           "preferred" true}
+                                          "000036"
+                                          {"name"
+                                           "MD.MP.CleanVoltageUpperLimit"
+                                           "preferred" false}
+                                          "000025"
+                                          {"name"
+                                           "MD.MP.WeldVoltageDropReference"
+                                           "preferred" false}
+                                          "00003c"
+                                          {"name" "MD.MP.CoolingAirActive"
+                                           "preferred" false}
+                                          "00008b"
+                                          {"name" "LMPenetrationActual"
+                                           "preferred" true}
+                                          "000034"
+                                          {"name"
+                                           "MD.MP.CleanVoltageActual"
+                                           "preferred" true}
+                                          "000092"
+                                          {"name" "WeldVoltagePeakActual"
+                                           "preferred" false}
+                                          "00000a"
+                                          {"name" "mqtt.t.e.compressed"
+                                           "preferred" false}
+                                          "00001a"
+                                          {"name" "MD.MP.OutletTotalWOPs"
+                                           "preferred" true}
+                                          "00006c"
+                                          {"name" "StudTool"
+                                           "preferred" false}
+                                          "000093"
+                                          {"name" "WeldVoltageDropActual"
+                                           "preferred" false}
+                                          "000009"
+                                          {"name" "mqtt.t.e.format"
+                                           "preferred" false}
+                                          "000094"
+                                          {"name" "StickoutActual"
+                                           "preferred" true}
+                                          "0000a1"
+                                          {"name" "voltage_Top_3_AMP"
+                                           "preferred" true}
+                                          "0000a0"
+                                          {"name" "voltage_Top_2_FREQ"
+                                           "preferred" true}
+                                          "000055"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperValueOpenActual"
+                                           "preferred" false}
+                                          "00001b"
+                                          {"name"
+                                           "MD.MP.WeldToolTotalWelds"
+                                           "preferred" true}
+                                          "000002-0"
+                                          {"name" "timestamp.year"
+                                           "preferred" false}
+                                          "000069"
+                                          {"name" "StudVariant"
+                                           "preferred" false}
+                                          "00007f"
+                                          {"name" "WeldVoltageActual"
+                                           "preferred" true}
+                                          "000028"
+                                          {"name" "MD.MP.LMPositionActual"
+                                           "preferred" true}
+                                          "00003f"
+                                          {"name"
+                                           "MD.MP.RepeatedWOPsCountWeldProgram"
+                                           "preferred" true}
+                                          "000007"
+                                          {"name" "mqtt.t.e.environment"
+                                           "preferred" false}
+                                          "00004d"
+                                          {"name"
+                                           "MD.MP.WeldToolMoveTimeLoadingPinForward"
+                                           "preferred" true}
+                                          "000058"
+                                          {"name"
+                                           "MD.MP.WeldToolPickupRotationAnglePosition"
+                                           "preferred" false}
+                                          "0000a6"
+                                          {"name" "liftpos_Top_2_FREQ"
+                                           "preferred" true}
+                                          "000031"
+                                          {"name"
+                                           "MD.MP.CleanCurrentActual"
+                                           "preferred" true}
+                                          "000061"
+                                          {"name" "station"
+                                           "preferred" false}
+                                          "0000aa"
+                                          {"name" "MD.MP.FaultCode"
+                                           "preferred" true}
+                                          "000040"
+                                          {"name" "MD.MP.Remarks"
+                                           "preferred" false}
+                                          "00008e"
+                                          {"name" "LMPenetrationLowerLimit"
+                                           "preferred" true}
+                                          "000054"
+                                          {"name"
+                                           "MD.MP.WeldToolGripperCorrectionValue"
+                                           "preferred" false}
+                                          "000087"
+                                          {"name" "LMLiftHeightUpperLimit"
+                                           "preferred" false}
+                                          "000081"
+                                          {"name" "WeldVoltageLowerLimit"
+                                           "preferred" false}
+                                          "000002-3"
+                                          {"name" "timestamp.day-of-week"
+                                           "preferred" true}
+                                          "000080"
+                                          {"name" "WeldVoltageUpperLimit"
+                                           "preferred" false}
+                                          "00008d"
+                                          {"name" "LMPenetrationUpperLimit"
+                                           "preferred" true}
+                                          "000000"
+                                          {"name" "fingerprint"
+                                           "preferred" false}
+                                          "000035"
+                                          {"name"
+                                           "MD.MP.CleanVoltageLowerLimit"
+                                           "preferred" false}
+                                          "000006"
+                                          {"name" "mqtt.t.e.name"
+                                           "preferred" false}
+                                          "000002-5"
+                                          {"name" "timestamp.minute"
+                                           "preferred" true}
+                                          "000002-4"
+                                          {"name" "timestamp.hour"
+                                           "preferred" true}
+                                          "00005d"
+                                          {"name" "location"
+                                           "preferred" false}
+                                          "00001c"
+                                          {"name" "MD.MP.ProgTotalWelds"
+                                           "preferred" true}
+                                          "000026"
+                                          {"name"
+                                           "MD.MP.WeldCurrentReferenceNegative"
+                                           "preferred" true}
+                                          "000004"
+                                          {"name" "mqtt.name"
+                                           "preferred" false}
+                                          "000045"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideForwardSlidePosition"
+                                           "preferred" false}
+                                          "00000b"
+                                          {"name" "mqtt.t.e.standard"
+                                           "preferred" false}
+                                          "000066"
+                                          {"name" "StudSeries"
+                                           "preferred" false}
+                                          "00001f"
+                                          {"name" "MD.MP.WeldProcess"
+                                           "preferred" true}
+                                          "000086"
+                                          {"name" "LMLiftHeightReference"
+                                           "preferred" false}
+                                          "000070"
+                                          {"name" "StudModelDescription"
+                                           "preferred" true}
+                                          "000014"
+                                          {"name" "MD.MP.InternalStudID"
+                                           "preferred" false}
+                                          "00009c"
+                                          {"name" "current_Top_3_FREQ"
+                                           "preferred" true}
+                                          "000011"
+                                          {"name" "MD.MP.DeviceName"
+                                           "preferred" false}
+                                          "00002f"
+                                          {"name"
+                                           "MD.MP.ProtectiveGasFlowDuringWeldprocessActive"
+                                           "preferred" false}
+                                          "0000a7"
+                                          {"name" "liftpos_Top_3_AMP"
+                                           "preferred" true}
+                                          "000002-1"
+                                          {"name" "timestamp.month"
+                                           "preferred" false}
+                                          "00007d"
+                                          {"name" "WeldTimeUpperLimit"
+                                           "preferred" true}
+                                          "000076"
+                                          {"name" "OutletNo"
+                                           "preferred" false}
+                                          "00002e"
+                                          {"name"
+                                           "MD.MP.ProtectiveGasPreFlowActive"
+                                           "preferred" false}
+                                          "000046"
+                                          {"name"
+                                           "MD.MP.WeldToolSlidePositionDataValid"
+                                           "preferred" false}
+                                          "000030"
+                                          {"name"
+                                           "MD.MP.ProtectiveGasPostFlowActive"
+                                           "preferred" false}
+                                          "00003d"
+                                          {"name"
+                                           "MD.MP.RepeatedWOPsCountPermitted"
+                                           "preferred" false}
+                                          "000042"
+                                          {"name"
+                                           "MD.MP.WeldToolSlideForwardMoveTime"
+                                           "preferred" true}
+                                          "000027"
+                                          {"name"
+                                           "MD.MP.WeldCurrentActualNegative"
+                                           "preferred" true}
+                                          "000037"
+                                          {"name" "MD.MP.MACProcessActive"
+                                           "preferred" false}
+                                          "000065"
+                                          {"name" "studSize"
+                                           "preferred" false}
+                                          "000077"
+                                          {"name"
+                                           "WeldCurrentActualPositive"
+                                           "preferred" true}
+                                          "00009b"
+                                          {"name" "current_Top_3_AMP"
+                                           "preferred" true}
+                                          "0000a5"
+                                          {"name" "liftpos_Top_2_AMP"
+                                           "preferred" true}
+                                          "000062"
+                                          {"name" "robot" "preferred" false}
+                                          "00009f"
+                                          {"name" "voltage_Top_2_AMP"
+                                           "preferred" true}
+                                          "00007b"
+                                          {"name" "WeldTimeActual"
+                                           "preferred" true}
+                                          "00004b"
+                                          {"name" "MD.MP.FeedingDataValid"
+                                           "preferred" true}
+                                          "00004c"
+                                          {"name"
+                                           "MD.MP.WeldToolMoveTimeLoadingPinBackward"
+                                           "preferred" true}
+                                          "00003b"
+                                          {"name"
+                                           "MD.MP.CleaningAirBlowActive"
+                                           "preferred" false}
+                                          "000085"
+                                          {"name" "LMLiftHeightActual"
+                                           "preferred" true}
+                                          "000079"
+                                          {"name" "WeldCurrentUpperLimit"
+                                           "preferred" false}
+                                          "00005e"
+                                          {"name" "series"
+                                           "preferred" false}
+                                          "000073"
+                                          {"name" "FeederNo"
+                                           "preferred" false}
+                                          "0000a2"
+                                          {"name" "voltage_Top_3_FREQ"
+                                           "preferred" true}
+                                          "00004e"
+                                          {"name"
+                                           "MD.MP.WeldToolLoadingPinDataValid"
+                                           "preferred" true}
+                                          "000082"
+                                          {"name" "PilotVoltageActual"
+                                           "preferred" true}
+                                          "000063"
+                                          {"name" "tool" "preferred" false}
+                                          "00007e"
+                                          {"name" "WeldTimeLowerLimit"
+                                           "preferred" true}
+                                          "000084"
+                                          {"name" "PilotVoltageLowerLimit"
+                                           "preferred" false}
+                                          "00008c"
+                                          {"name" "LMPenetrationReference"
+                                           "preferred" true}
+                                          "000038"
+                                          {"name"
+                                           "MD.MP.MACProcessSuccessful"
+                                           "preferred" false}
+                                          "000012"
+                                          {"name" "MD.MP.Devicetype"
+                                           "preferred" false}
+                                          "000099"
+                                          {"name" "current_Top_2_AMP"
+                                           "preferred" true}
+                                          "00008a"
+                                          {"name" "DropTimeReference"
+                                           "preferred" false}
+                                          "00006b"
+                                          {"name" "StudPlant"
+                                           "preferred" false}
+                                          "00006f"
+                                          {"name" "StudVariantDescription"
+                                           "preferred" false}
+                                          "0000ac"
+                                          {"name" "Q_Status"
+                                           "preferred" true}
+                                          "00006d"
+                                          {"name" "StudTypeDescription"
+                                           "preferred" true}}
+                                         "objective_field"
+                                         {"id" "1000b4" "name" "score"}}
+                                        dataset5)))

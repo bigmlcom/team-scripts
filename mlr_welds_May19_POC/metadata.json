@@ -1,0 +1,87 @@
+{
+  "name": "MLR Welds May19 POC",
+  "description": "The script receives one argument:  \n\n-  **source**: Uploaded source from mlr_welds_May19_POC.csv",
+  "tags": [
+    "May19",
+    "Welds",
+    "Daimler",
+    "Daimler POC"
+  ],
+  "category": 1,
+  "kind": "script",
+  "source_code": "mlr_welds_May19_POC.whizzml",
+  "inputs": [
+    {
+      "description": "Create sets of resources from the initial source",
+      "name": "initial_source",
+      "type": "source-id"
+    }
+  ],
+  "outputs": [
+    {
+      "description": "Anomaly Detector",
+      "name": "anomaly1",
+      "type": "anomaly-id"
+    },
+    {
+      "description": "Association Discovery",
+      "name": "association1",
+      "type": "association-id"
+    },
+    {
+      "description": "Batch Anomaly Score",
+      "name": "batchanomalyscore1",
+      "type": "batchanomalyscore-id"
+    },
+    {
+      "description": "Batch Centroid",
+      "name": "batchcentroid1",
+      "type": "batchcentroid-id"
+    },
+    {
+      "description": "Cluster",
+      "name": "cluster1",
+      "type": "cluster-id"
+    },
+    {
+      "description": "BatchCentroid",
+      "name": "batchcentroid1",
+      "type": "batchcentroid-id"
+    },
+    {
+      "description": "Batch Centroid Dataset",
+      "name": "dataset3",
+      "type": "dataset-id"
+    },
+    {
+      "description": "Batch Centroid Dataset",
+      "name": "dataset4",
+      "type": "dataset-id"
+    },
+    {
+      "description": "Batch Anomaly Score Dataset",
+      "name": "dataset5",
+      "type": "dataset-id"
+    },
+    {
+      "description": "Batch Anomaly Score Dataset",
+      "name": "dataset6",
+      "type": "dataset-id"
+    },
+    {
+      "description": "Dataset set objective field",
+      "name": "dataset_set_obj",
+      "type": "dataset-id"
+    },
+    {
+      "description": "Main Dataset from source",
+      "name": "main_dataset",
+      "type": "dataset-id"
+    },
+    {
+      "description": "Source to be updated",
+      "name": "updated_source",
+      "type": "source-id"
+    }
+  ]
+}
