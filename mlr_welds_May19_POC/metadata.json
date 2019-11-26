@@ -19,24 +19,19 @@
   ],
   "outputs": [
     {
-      "description": "Anomaly Detector",
-      "name": "anomaly1",
-      "type": "anomaly-id"
+      "description": "Source to be updated",
+      "name": "updated_source",
+      "type": "source-id"
     },
     {
-      "description": "Association Discovery",
-      "name": "association1",
-      "type": "association-id"
+      "description": "Dataset set objective field",
+      "name": "dataset_set_obj",
+      "type": "dataset-id"
     },
     {
-      "description": "Batch Anomaly Score",
-      "name": "batchanomalyscore1",
-      "type": "batchanomalyscore-id"
-    },
-    {
-      "description": "Batch Centroid",
-      "name": "batchcentroid1",
-      "type": "batchcentroid-id"
+      "description": "Main Dataset from source",
+      "name": "main_dataset",
+      "type": "dataset-id"
     },
     {
       "description": "Cluster",
@@ -44,7 +39,12 @@
       "type": "cluster-id"
     },
     {
-      "description": "BatchCentroid",
+      "description": "Association Discovery",
+      "name": "association1",
+      "type": "association-id"
+    },
+    {
+      "description": "Batch Centroid",
       "name": "batchcentroid1",
       "type": "batchcentroid-id"
     },
@@ -59,6 +59,16 @@
       "type": "dataset-id"
     },
     {
+      "description": "Anomaly Detector",
+      "name": "anomaly1",
+      "type": "anomaly-id"
+    },
+    {
+      "description": "Batch Anomaly Score",
+      "name": "batchanomalyscore1",
+      "type": "batchanomalyscore-id"
+    },
+    {
       "description": "Batch Anomaly Score Dataset",
       "name": "dataset5",
       "type": "dataset-id"
@@ -67,21 +77,6 @@
       "description": "Batch Anomaly Score Dataset",
       "name": "dataset6",
       "type": "dataset-id"
-    },
-    {
-      "description": "Dataset set objective field",
-      "name": "dataset_set_obj",
-      "type": "dataset-id"
-    },
-    {
-      "description": "Main Dataset from source",
-      "name": "main_dataset",
-      "type": "dataset-id"
-    },
-    {
-      "description": "Source to be updated",
-      "name": "updated_source",
-      "type": "source-id"
     }
   ]
 }
